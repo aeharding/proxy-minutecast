@@ -13,7 +13,7 @@ var app = express();
 app.get('/', function (req, res) {
   var ret = [];
 
-  request('http://www.accuweather.com/en/us/madison-wi/53706/minute-weather-forecast/331530', function (error, response, html) {
+  request('http://www.accuweather.com/en/us/cottage-grove-wi/53527/minute-weather-forecast/23209_pc', function (error, response, html) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
       $('.spanwith').each(function(i, element){
